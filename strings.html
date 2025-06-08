@@ -1,0 +1,78 @@
+ <!-- Created by Miguel Martinez June 06, 2025 -->
+  <!DOCTYPE html>
+  <html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Secure Access Form</title>
+        <!-- Link to external Javascript -->
+         <script src="validateCustom.js" defer></script>
+         <!-- Embeddedd CSS for visual design -->
+          <style>
+            body {
+                background-color: purple;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 40px;
+            }
+            form{
+                background: black;
+                padding: 20px;
+                border-radius: 14px;
+                max-width: 450px;
+                margin: auto;
+                box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            }
+            input, button{
+                margin:10px 0;
+                padding: 10px;
+                width: 100%;
+                font-size: 16px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+            }
+            button{
+                background-color: white;
+                color: black;
+                border: none;
+            }
+            #message{
+                margin-top: 20px;
+                font-weight: bold;
+                color: white;
+            }
+            img{
+                max-width: 100%;
+                margin-top: 20px;
+                border-radius: 10px;
+            }
+          </style>
+    </head>
+    <body>
+        <!-- Page heading -->
+         <h1>Welcome to the Secure Vault</h1>
+
+         <!-- Form Container -->
+          <form id="userForm" onsubmit="return validateForm();">
+
+         <!-- Fist name input -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+         <!-- Last name input -->
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required>
+
+         <!-- Zip code input -->
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode" required>
+
+         <!-- Submit button -->
+            <button type="submit">Unlock Message</button>
+          </form>
+
+        <!-- Feedback and result area -->
+          <div id="message"></div>
+        <!-- Decorative image as creative element -->
+          <img src="https://picsum.photos/400/200" alt="Security image banner">
+
+        </body>
+  </html>
